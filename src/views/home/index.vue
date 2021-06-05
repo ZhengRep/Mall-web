@@ -1,33 +1,5 @@
 <template>
   <div class="app-container">
-    <div class="address-layout">
-      <el-row :gutter="20">
-        <el-col :span="6">
-          <div class="out-border">
-            <div class="layout-title">后台项目</div>
-            <div class="color-main address-content">
-              <a href="https://github.com/macrozheng/mall">mall</a>
-            </div>
-          </div>
-        </el-col>
-        <el-col :span="6">
-          <div class="out-border">
-            <div class="layout-title">前端项目</div>
-            <div class="color-main address-content">
-              <a href="https://github.com/macrozheng/mall-admin-web">mall-admin-web</a>
-            </div>
-          </div>
-        </el-col>
-        <el-col :span="6">
-          <div class="out-border">
-            <div class="layout-title">学习教程</div>
-            <div class="color-main address-content">
-              <a href="https://github.com/macrozheng/mall-learning">mall-learning</a>
-            </div>
-          </div>
-        </el-col>
-      </el-row>
-    </div>
     <div class="total-layout">
       <el-row :gutter="20">
         <el-col :span="6">
@@ -61,13 +33,6 @@
         <!--</el-col>-->
       </el-row>
     </div>
-    <el-card class="mine-layout">
-      <div style="text-align: center">
-        <img width="150px" height="150px" src="http://macro-oss.oss-cn-shenzhen.aliyuncs.com/mall/banner/qrcode_for_macrozheng_258.jpg">
-      </div>
-      <div style="text-align: center">mall全套学习教程连载中！</div>
-      <div style="text-align: center;margin-top: 5px"><span class="color-main">关注公号</span>，第一时间获取。</div>
-    </el-card>
     <div class="un-handle-layout">
       <div class="layout-title">待处理事务</div>
       <div class="un-handle-content">
@@ -252,21 +217,21 @@
   const DATA_FROM_BACKEND = {
     columns: ['date', 'orderCount','orderAmount'],
     rows: [
-      {date: '2018-11-01', orderCount: 10, orderAmount: 1093},
-      {date: '2018-11-02', orderCount: 20, orderAmount: 2230},
-      {date: '2018-11-03', orderCount: 33, orderAmount: 3623},
-      {date: '2018-11-04', orderCount: 50, orderAmount: 6423},
-      {date: '2018-11-05', orderCount: 80, orderAmount: 8492},
-      {date: '2018-11-06', orderCount: 60, orderAmount: 6293},
-      {date: '2018-11-07', orderCount: 20, orderAmount: 2293},
-      {date: '2018-11-08', orderCount: 60, orderAmount: 6293},
-      {date: '2018-11-09', orderCount: 50, orderAmount: 5293},
-      {date: '2018-11-10', orderCount: 30, orderAmount: 3293},
-      {date: '2018-11-11', orderCount: 20, orderAmount: 2293},
-      {date: '2018-11-12', orderCount: 80, orderAmount: 8293},
-      {date: '2018-11-13', orderCount: 100, orderAmount: 10293},
-      {date: '2018-11-14', orderCount: 10, orderAmount: 1293},
-      {date: '2018-11-15', orderCount: 40, orderAmount: 4293}
+      {date: '2021-06-01', orderCount: 10, orderAmount: 1093},
+      {date: '2021-06-02', orderCount: 20, orderAmount: 2230},
+      {date: '2021-06-03', orderCount: 33, orderAmount: 3623},
+      {date: '2021-06-04', orderCount: 50, orderAmount: 6423},
+      {date: '2021-06-05', orderCount: 80, orderAmount: 8492},
+      {date: '2021-06-06', orderCount: 60, orderAmount: 6293},
+      {date: '2021-06-07', orderCount: 20, orderAmount: 2293},
+      {date: '2021-06-08', orderCount: 60, orderAmount: 6293},
+      {date: '2021-06-09', orderCount: 50, orderAmount: 5293},
+      {date: '2021-06-10', orderCount: 30, orderAmount: 3293},
+      {date: '2021-06-11', orderCount: 20, orderAmount: 2293},
+      {date: '2021-06-12', orderCount: 80, orderAmount: 8293},
+      {date: '2021-06-13', orderCount: 100, orderAmount: 10293},
+      {date: '2021-06-14', orderCount: 10, orderAmount: 1293},
+      {date: '2021-06-15', orderCount: 40, orderAmount: 4293}
     ]
   };
   export default {
@@ -279,8 +244,8 @@
             onClick(picker) {
               const end = new Date();
               let start = new Date();
-              start.setFullYear(2018);
-              start.setMonth(10);
+              start.setFullYear(2021);
+              start.setMonth(5);
               start.setDate(1);
               end.setTime(start.getTime() + 3600 * 1000 * 24 * 7);
               picker.$emit('pick', [start, end]);
@@ -290,8 +255,8 @@
             onClick(picker) {
               const end = new Date();
               let start = new Date();
-              start.setFullYear(2018);
-              start.setMonth(10);
+              start.setFullYear(2021);
+              start.setMonth(5);
               start.setDate(1);
               end.setTime(start.getTime() + 3600 * 1000 * 24 * 30);
               picker.$emit('pick', [start, end]);
@@ -325,8 +290,8 @@
       },
       initOrderCountDate(){
         let start = new Date();
-        start.setFullYear(2018);
-        start.setMonth(10);
+        start.setFullYear(2021);
+        start.setMonth(5);
         start.setDate(1);
         const end = new Date();
         end.setTime(start.getTime() + 1000 * 60 * 60 * 24 * 7);
@@ -357,7 +322,7 @@
 
 <style scoped>
   .app-container {
-    margin-top: 40px;
+    margin-top: 20px;
     margin-left: 120px;
     margin-right: 120px;
   }
@@ -366,7 +331,7 @@
   }
 
   .total-layout {
-    margin-top: 20px;
+    margin-top: 10px;
   }
 
   .total-frame {
